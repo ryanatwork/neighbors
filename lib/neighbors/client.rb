@@ -5,6 +5,7 @@ require 'neighbors/client/cities'
 require 'neighbors/client/neighbor'
 require 'neighbors/client/neighborhoods'
 require 'neighbors/client/questions'
+require 'neighbors/client/topics'
 
 module Neighbors
   class Client
@@ -24,6 +25,7 @@ module Neighbors
     include Neighbors::Client::Neighbor
     include Neighbors::Client::Neighborhoods
     include Neighbors::Client::Questions
+    include Neighbors::Client::Topics
 
   end
 end
