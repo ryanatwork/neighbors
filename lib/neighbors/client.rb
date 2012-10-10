@@ -1,5 +1,7 @@
 require 'neighbors/connection'
 require 'neighbors/request'
+
+require 'neighbors/client/cities'
 require 'neighbors/client/neighbor'
 
 module Neighbors
@@ -16,6 +18,7 @@ module Neighbors
     include Neighbors::Connection
     include Neighbors::Request
 
+    include Neighbors::Client::Cities
     include Neighbors::Client::Neighbor
 
   end
