@@ -2,6 +2,7 @@ require 'neighbors/connection'
 require 'neighbors/request'
 
 require 'neighbors/client/cities'
+require 'neighbors/client/ideas'
 require 'neighbors/client/neighbor'
 require 'neighbors/client/neighborhoods'
 require 'neighbors/client/questions'
@@ -22,6 +23,7 @@ module Neighbors
     include Neighbors::Request
 
     include Neighbors::Client::Cities
+    include Neighbors::Client::Ideas
     include Neighbors::Client::Neighbor
     include Neighbors::Client::Neighborhoods
     include Neighbors::Client::Questions
