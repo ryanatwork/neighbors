@@ -14,6 +14,8 @@ module Neighbors
         :url => url,
       }
 
+      options.merge!(:params => {:access_token => oauth_token}) if oauthed?
+
       connection = Faraday.new(options) do |builder|
         builder.request :url_encoded
         builder.use Faraday::Response::RaiseError

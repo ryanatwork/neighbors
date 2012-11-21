@@ -1,3 +1,4 @@
+require 'neighbors/authentication'
 require 'neighbors/connection'
 require 'neighbors/request'
 
@@ -22,6 +23,7 @@ module Neighbors
       end
     end
 
+    include Neighbors::Authentication
     include Neighbors::Connection
     include Neighbors::Request
 
