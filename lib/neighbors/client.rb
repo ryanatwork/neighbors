@@ -5,6 +5,7 @@ require 'neighbors/client/cities'
 require 'neighbors/client/comments'
 require 'neighbors/client/ideas'
 require 'neighbors/client/images'
+require 'neighbors/client/metoos'
 require 'neighbors/client/neighbor'
 require 'neighbors/client/neighborhoods'
 require 'neighbors/client/questions'
@@ -28,6 +29,7 @@ module Neighbors
     include Neighbors::Client::Comments
     include Neighbors::Client::Ideas
     include Neighbors::Client::Images
+    include Neighbors::Client::MeToos
     include Neighbors::Client::Neighbor
     include Neighbors::Client::Neighborhoods
     include Neighbors::Client::Questions
