@@ -2,11 +2,11 @@ module Neighbors
   class Client
     module Images
 
-      def images_ideas(id, options={})
+      def ideas_images(id, options={})
         get("ideas/#{id}/images", options)
       end
 
-      def images_questions(id, options={})
+      def questions_images(id, options={})
         get("questions/#{id}/images", options)
       end
 

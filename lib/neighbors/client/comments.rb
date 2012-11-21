@@ -2,11 +2,11 @@ module Neighbors
   class Client
     module Comments
 
-      def comments_ideas(id, options={})
+      def ideas_comments(id, options={})
         get("ideas/#{id}/comments", options)
       end
 
-      def comments_neighbors(id, options={})
+      def neighbors_comments(id, options={})
         get("neighbors/#{id}/comments", options)
       end
 
