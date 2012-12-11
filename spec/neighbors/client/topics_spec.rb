@@ -6,23 +6,23 @@ describe Neighbors::Client::Topics do
     @client = Neighbors::Client.new
   end
 
-  describe ".topics" do
+  describe ".topics_show" do
     it "should show detailed information about the topic with the given id" do
-      stub_get("/topics/nola-green").
+      stub_get("/topics/green").
         to_return(:body => fixture("topics-show.json"))
 
-      topic = @client.topics("nola-green")
+      topic = @client.topics_show("green")
       topic.name.should == "Green"
     end
   end
 
-  describe ".topics_city" do
-    it "should list all the topics in the city with the given id" do
-      stub_get("/cities/bldr/topics").
-        to_return(:body => fixture("topics-city.json"))
+  describe ".topics" do
+    it "should list all the topics" do
+      stub_get("/topics").
+        to_return(:body => fixture("topics-index.json"))
 
-      city_topics = @client.topics_city("bldr")
-      city_topics.first.id.should == "bldr-green"
+      topics = @client.topics
+      topics.first.id.should == "animals"
     end
   end
 

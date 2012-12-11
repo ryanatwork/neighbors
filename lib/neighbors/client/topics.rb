@@ -2,12 +2,12 @@ module Neighbors
   class Client
     module Topics
 
-      def topics(id, options={})
-        get("topics/#{id}", options)
+      def topics_show(topic, options={})
+        get("topics/#{topic}", options)
       end
 
-      def topics_city(city, options={})
-        get("cities/#{city}/topics", options)
+      def topics(options={})
+        get("topics", options)
       end
 
     end
